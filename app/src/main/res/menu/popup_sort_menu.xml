@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/yearDOWN"
+        android:title="\u25BC По году выпуска" />
+    <item
+        android:id="@+id/yearUP"
+        android:title="\u25B2 По году выпуска" />
+    <item
+        android:id="@+id/imdpDOWN"
+        android:title="\u25BC По рейтингу IMDB" />
+    <item
+        android:id="@+id/imdbUP"
+        android:title="\u25B2 По рейтингу IMDB" />
+    <item
+        android:id="@+id/shikiDOWN"
+        android:title="\u25BC По рейтингу Shikimori" />
+    <item
+        android:id="@+id/shikiUP"
+        android:title="\u25B2 По рейтингу Shikimori" />
+</menu>

@@ -1,0 +1,12 @@
+
+<resources>
+    <!-- Определение собственного стиля для BottomNavigationView -->
+    <style name="MyBottomNavStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:textAppearance">@style/MyBottomNavStyle</item>
+    </style>
+
+    <!-- Определение собственного стиля для текста -->
+    <style name="MyTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/tt_norms_pro_regular</item> <!-- Замените your_font_name на имя вашего шрифта -->
+    </style>
+</resources>

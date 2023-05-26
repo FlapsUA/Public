@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212529"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbarMain"
+        layout="@layout/custom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivFilms"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        app:srcCompat="@drawable/films"
+        tools:srcCompat="@drawable/films" />
+
+    <ImageView
+        android:id="@+id/ivSerials"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="4dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/ivFilms"
+        app:layout_constraintTop_toTopOf="@+id/ivFilms"
+        app:srcCompat="@drawable/serials" />
+
+    <ImageView
+        android:id="@+id/ivAnime"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivFilms"
+        app:srcCompat="@drawable/anime" />
+
+    <ImageView
+        android:id="@+id/ivCartoons"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="4dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/ivAnime"
+        app:layout_constraintTop_toTopOf="@+id/ivAnime"
+        app:srcCompat="@drawable/cartoon" />
+
+    <TextView
+        android:id="@+id/tvFilms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded"
+        android:fontFamily="@font/tt_norms_pro_regular"
+        android:text="Фильмы"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFilms"
+        app:layout_constraintEnd_toEndOf="@+id/ivFilms"
+        app:layout_constraintStart_toStartOf="@+id/ivFilms"
+        app:layout_constraintTop_toTopOf="@+id/ivFilms" />
+
+    <TextView
+        android:id="@+id/tvNew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/grad2"
+        android:fontFamily="@font/tt_norms_pro_regular"
+        android:gravity="center_vertical|start"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:text="Новинки"
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/rvNew"
+        app:layout_constraintStart_toStartOf="@+id/rvNew"
+        app:layout_constraintTop_toBottomOf="@+id/ivAnime" />
+
+    <TextView
+        android:id="@+id/tvSerials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded"
+        android:fontFamily="@font/tt_norms_pro_regular"
+        android:text="Сериалы"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSerials"
+        app:layout_constraintEnd_toEndOf="@+id/ivSerials"
+        app:layout_constraintStart_toStartOf="@+id/ivSerials"
+        app:layout_constraintTop_toTopOf="@+id/ivSerials" />
+
+    <TextView
+        android:id="@+id/tvAnimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded"
+        android:fontFamily="@font/tt_norms_pro_regular"
+        android:text="Аниме"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAnime"
+        app:layout_constraintEnd_toEndOf="@+id/ivAnime"
+        app:layout_constraintStart_toStartOf="@+id/ivAnime"
+        app:layout_constraintTop_toTopOf="@+id/ivAnime" />
+
+    <TextView
+        android:id="@+id/tvCartoons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/bg_rounded"
+        android:fontFamily="@font/tt_norms_pro_regular"
+        android:text="Мультфильмы"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCartoons"
+        app:layout_constraintEnd_toEndOf="@+id/ivCartoons"
+        app:layout_constraintStart_toStartOf="@+id/ivCartoons"
+        app:layout_constraintTop_toTopOf="@+id/ivCartoons" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#212529"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bBack"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:clickable="true"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/FilmPageFragmentConteiner"
+        android:name="com.bumptech.glide.manager.SupportRequestManagerFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:indeterminateDrawable="@anim/loader"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tErrorMessege2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/loading_error"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <Button
+        android:id="@+id/bRetry2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_try_again"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tErrorMessege2" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/BottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/mail_grad"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:menu="@menu/botom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNew"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNew" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
